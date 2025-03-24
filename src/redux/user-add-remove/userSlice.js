@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 
-
 export const addUser = createAsyncThunk('users/adduser', async (user)=>{
        return user;
 });
