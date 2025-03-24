@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import react from 'react';
 import './App.css';
+import Counter from './redux/Component';
+import CounterComponent from './redux/app2/CounterComponent';
+import { BrowserRouter, Link, Route, Routes } from 'react-router';
+import UsersList from './redux/blogPost/UsersList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <BrowserRouter>
+    <Link to="/counter">counter</Link>
+    <br />
+    <Link to="/countercomponent">counter component</Link>
+    <br />
+    <br />
+    <Link to="/userlist">user list</Link>
+    <Routes>
+         <Route path='/counter' element={<Counter />} />
+         <Route path='/countercomponent' element={<CounterComponent />} />
+         <Route path='/userlist' element={<UsersList />} />
+    </Routes>
+    </BrowserRouter>
+    
   );
 }
 
