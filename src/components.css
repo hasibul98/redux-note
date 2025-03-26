@@ -1,0 +1,9 @@
+/* components.css */
+
+.btn {
+       padding: theme('spacing.4') theme('spacing.2');
+       /* ... */
+     }
+     
+     /* Will not work */
+     @import "./components/card";

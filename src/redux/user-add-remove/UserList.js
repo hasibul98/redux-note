@@ -13,7 +13,7 @@ function UserList() {
                             <li key={user.id}>
                                    {user.name} <button onClick={()=>dispatch(removeUser(user.id))}>Remove user</button>
                                    
-                                   </li>
+                            </li>
                      ))
                      }
              </ul>
