@@ -21,11 +21,7 @@ const ColorBox = styled.div`
        margin: 20px;
        color: white;
 `;
-const loadContainer = styled.div`
-       display: flex;
-       justify-content: center;
-       align-items: center;
-`;
+
 
 function ColorGenerator ()
 {
@@ -34,6 +30,7 @@ function ColorGenerator ()
 
        const observer = useRef();
        const loading = useSelector( state => state.color.loading );
+       console.log( loading );
        const handleLoadMore = () =>
        {
               dispatch( startLoading() );

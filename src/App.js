@@ -10,6 +10,7 @@ import Nav from 'react-bootstrap/Nav';
 import NewsAggregator from './redux/news-agregator/NewsAggregator';
 import SignUp from './user-signUp/SignUp';
 import ColorGenerator from './redux/colorGenerator/ColorGenerator';
+import Login from './redux/login/Login';
 
 function App ()
 {
@@ -41,6 +42,9 @@ function App ()
         <Nav.Item>
           <Nav.Link href='/colorgenerator'>color generator</Nav.Link>
         </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href='/login'>Login</Nav.Link>
+        </Nav.Item>
 
 
       </Nav>
@@ -66,6 +70,7 @@ function App ()
         <Route path='/newsagregator' element={ <NewsAggregator /> } />
         <Route path='/sign-up' element={ <SignUp /> } />
         <Route path='/colorgenerator' element={ <ColorGenerator /> } />
+        <Route path='/login' element={ <Login /> } />
       </Routes>
     </BrowserRouter>
 
